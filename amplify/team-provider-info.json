@@ -33,6 +33,11 @@
             "UnauthRoleName": "airline-booking-20190505102831-unauthRole",
             "StackName": "airline-booking-20190505102831",
             "StackId": "arn:aws:cloudformation:us-east-1:271522064567:stack/airline-booking-20190505102831/62e12fd0-6f07-11e9-9934-0abba895ce2c"
+        },
+        "categories": {
+            "auth": {
+                "cognitoaeebef43": {}
+            }
         }
     }
 }

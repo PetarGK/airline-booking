@@ -1,0 +1,80 @@
+{
+    "identityPoolName": "cognitoaeebef43_identitypool_aeebef43",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "cognitoaeebef43_lambda_log_policy",
+    "openIdLambdaRoleName": "cognitoaeebef43_openid_lambda_role",
+    "openIdRolePolicy": "cognitoaeebef43_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "cognitoaeebef43_openid_lambda_iam_policy",
+    "openIdLogPolicy": "cognitoaeebef43_openid_lambda_log_policy",
+    "userPoolName": "cognitoaeebef43_userpool_aeebef43",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "cognitoaeebef43_sns-role",
+    "roleExternalId": "cognitoaeebef43_role_external_id",
+    "policyName": "cognitoaeebef43-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email",
+        "family_name",
+        "given_name",
+        "phone_number"
+    ],
+    "userpoolClientName": "cognitoaeebef43_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email",
+        "custom:lagguge_preference",
+        "custom:meal_preference"
+    ],
+    "userpoolClientReadAttributes": [
+        "email",
+        "custom:lagguge_preference",
+        "custom:meal_preference"        
+    ],
+    "mfaLambdaRole": "cognitoaeebef43_totp_lambda_role",
+    "mfaLambdaLogPolicy": "cognitoaeebef43_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "cognitoaeebef43_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "cognitoaeebef43_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "cognitoaeebef43_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "cognitoaeebef43_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "cognitoaeebef43_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "cognitoaeebef43",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
