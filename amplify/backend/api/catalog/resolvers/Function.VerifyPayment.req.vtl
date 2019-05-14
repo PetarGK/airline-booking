@@ -1,0 +1,17 @@
+##
+## Make arbitrary HTTP GET request to HTTP Data Source, pass Authorization Cognito JWT and send Payment token as Query String
+##
+{
+  "method": "GET",
+  ## E.G. if full path is https://api.xxxxxxxxx.com/posts then resourcePath would be /posts **
+  "resourcePath": "/status/200",
+  "params":{
+      "query": {
+        "token": $util.toJson($ctx.stash.paymentToken)
+      },
+      "headers": {
+          "Authorization": "$ctx.request.headers.Authorization"
+      }
+  }
+}
+## [End] Prepare DynamoDB PutItem Request. **

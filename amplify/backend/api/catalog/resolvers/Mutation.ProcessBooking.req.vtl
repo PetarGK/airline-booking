@@ -1,0 +1,5 @@
+$util.qr($ctx.stash.put("outboundFlightId", $ctx.args.input.bookingOutboundFlightId))
+$util.qr($ctx.stash.put("paymentToken", $ctx.args.input.paymentToken))
+$util.qr($ctx.stash.put("customer", $ctx.identity.sub))
+
+{}
