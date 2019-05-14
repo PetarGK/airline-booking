@@ -1,6 +1,6 @@
 projects:
   catalog:
-    schemaPath: src/graphql/schema.json
+    schemaPath: src\graphql\schema.json
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -11,6 +11,3 @@ projects:
         generatedFileName: ''
         docsFilePath: src/graphql
         graphQLApiId: f4i4rmwsfbg6jcw4sog5rdm6mi
-      endpoints:
-        prod: >-
-          https://56sepdwxdrgrhlhn4qadpr7faq.appsync-api.us-east-1.amazonaws.com/graphql

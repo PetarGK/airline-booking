@@ -1,0 +1,22 @@
+## Decreases Seat allocation as a mean to reserve a booking
+## while booking isn't confirmed and payment verified
+## Do fail immediately if we cannot reserve a flight
+{
+    "version": "2017-02-28",
+    "operation": "UpdateItem",
+    "key": {
+        "id": $util.dynamodb.toDynamoDBJson($ctx.stash.outboundFlightId) 
+    },
+    "update": {
+      "expression": "SET seatAllocation = seatAllocation - :dec",
+      "expressionValues": {
+          ":dec": {"N": "1"}
+      }
+    },
+    "condition": {
+        "expression": "seatAllocation > :noSeat",
+        "expressionValues": {
+            ":noSeat": {"N": "0"}
+        }
+    }
+}
